@@ -34,3 +34,11 @@ python manage.py shell
 # create super user
 python manage.py createsuperuser
 ```
+
+Use gitignore file to ignore some files
+
+```
+git rm -r --cached some-directory
+git commit -m 'Remove the now ignored directory "some-directory"'
+git push origin master
+```
