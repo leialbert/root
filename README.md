@@ -11,6 +11,7 @@ mv env root
 cd root
 django-admin startproject mysite .
 django-admin startapp polls
+python manage.py migrate
 
 
 ```
