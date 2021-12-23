@@ -8,10 +8,11 @@
   </head>
   <body>
     <div>
-      {% if latest_question_list %}
+      {% if latest_question_text %}
       <ul>
         {% for q in latest_question_list %}
         <li><a href="{% url 'detail' %}">{{ q.question_text }}</a></li>
+        {% endfor %}
       </ul>
       {% else %}
       <p>No available questions</p>
