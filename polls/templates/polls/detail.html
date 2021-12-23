@@ -7,6 +7,15 @@
     <title>Detail of Question</title>
   </head>
   <body>
-    <div>{{ question }}</div>
+    <div id="app">
+      <div><h1>{{ question.question_text }}</h1></div>
+      <div>
+        <ul>
+          {% for choice in question.choice_set.all %}
+          <li>{{ choice }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
