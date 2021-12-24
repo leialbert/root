@@ -42,3 +42,21 @@ git rm -r --cached some-directory
 git commit -m 'Remove the now ignored directory "some-directory"'
 git push origin master
 ```
+
+get the django path
+```
+python -c "import django; print(django.__path__)"
+```
+move the polls folder outside of the project folder,after that try to package it with setuptools.
+
+after this , use this command to install it again. it works.
+```
+python -m pip install django-polls/dist/django-polls-0.1.tar.gz
+
+# the original command is :
+python -m pip install --user django-polls/dist/django-polls-0.1.tar.gz
+
+# but when you r using a virtualenv environment you will get an error.
+
+ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+```
