@@ -61,5 +61,11 @@ python -m pip install --user django-polls/dist/django-polls-0.1.tar.gz
 ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
 ```
 
-## I moved the folder from outside to project inside just because I want to upload to github
+## I moved the folder from outside to project inside just because I want to upload to github and also copied back the polls app.
+
+```
+# because I want to check the source code , so I uninstall this package
+python -m pip uninstall django-polls
+```
+
 
