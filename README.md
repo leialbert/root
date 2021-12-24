@@ -2,6 +2,10 @@
 
 This is my learning project.
 
+before you start.
+
+https://diveinto.org/python3/table-of-contents.html
+
 ```
 # env configure
 virtualenv -p python3 env
