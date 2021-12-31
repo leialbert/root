@@ -49,7 +49,8 @@ git push origin master
 
 get the django path
 ```
-python -c "import django; print(django.__path__)"
+python -c "import django; 
+print(django.__path__)"
 ```
 move the polls folder outside of the project folder,after that try to package it with setuptools.
 
