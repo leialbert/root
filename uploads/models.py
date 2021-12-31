@@ -9,8 +9,8 @@ class Author(models.Model):
         ('MRS','Mrs.'),
         ('MS','Ms.'),
     ]
-    name = models.CharField(max_length=100)
-    title = models.CharField(max_length=3,choices=TITLE_CHOICE)
+    name = models.CharField(max_length=100,null=True)
+    title = models.CharField(max_length=3,choices=TITLE_CHOICE,null= True)
     birth_date = models.DateField(blank=True,null=True)
     avatar = models.ImageField(null=True,blank=True,upload_to='root/kk/')
     def __str__(self) -> str:

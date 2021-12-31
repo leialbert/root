@@ -1,5 +1,9 @@
 from django import forms
+from django.forms import fields
+
+from uploads.models import Author
 
 class AvatarForm(forms.Form):
-    # name = forms.CharField()
-    avatar_field = forms.ImageField()
+    class Meta:
+        model = Author
+        field = '__all__'

@@ -7,10 +7,17 @@ from .forms import AvatarForm
 def index(request):
     if request.method == 'POST':
         form = AvatarForm(request.POST,request.FILES)
-        name = form.cleaned_data.get('name')
-        print('hello - ' + name)
         if form.is_valid():
-            print(form)
+            name = form.data.get('name')
+            title = form.data.get('title')
+            birth_date = form.data.get('dob')
+            avatar = form.files.get('avatar')
+            Author.objects.create(
+                name = name,
+                title = title,
+                birth_date = birth_date,
+                avatar = avatar
+            )
         else:
             print('form not valid')
     return HttpResponse('hello')
